@@ -1,15 +1,12 @@
 import whisper
 
 def transcribe(audio):
-    # Load the model (downloads it the first time)
-    model = whisper.load_model("base")
+    #loading model 
+    model = whisper.load_model("medium")
 
-    # Transcribe an audio file
+    #transcribe audio file
     result = model.transcribe(audio)
 
-    # Print the recognized speech
-    #print(result["text"])
-
-   # return transcription
+   #return transcription
     transcription = result["text"]
     return transcription
