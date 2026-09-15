@@ -2,11 +2,11 @@ import whisper
 
 def transcribe(audio):
     #loading model 
-    model = whisper.load_model("small")
+    model = whisper.load_model("turbo")
 
     #transcribe audio file
     result = model.transcribe(audio)
 
-   #return transcription
+    #return transcription
     transcription = result["text"]
     return transcription
