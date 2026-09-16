@@ -7,27 +7,33 @@ output_format = {
         "date_of_birth": {"type": ["string", "null"]},
         "patient_ID_number": {"type": ["string", "null"]},
         "sex": {"type": ["string","null"]},
+        "symptoms": {"type":["string","null"]},
         "diagnosis": {"type": ["string", "null"]},
         "tests_requested": {
             "type": ["array", "null"],
             "items": {"type": "string"}
         },
         "requesting_healthcare_worker":{"type": ["string", "null"]},
-                "HPCSA_SANC_number":{"type": ["string", "null"]},
+                "HPCSA":{"type": ["string", "null"]},
                 "contact_number":{"type": ["string", "null"]},
-                "email_address":{"type": ["string", "null"]}
+                "email_address":{"type": ["string", "null"]},
+                "hospital_name": {"type":["string","null"]},
+                "ward_number": {"type":["string","null"]}
     },
     "required": [
         "patient_name",
         "date_of_birth",
         "patient_ID_number",
         "sex",
+        "symptoms",
         "diagnosis",
-        "tests_requested"
+        "tests_requested",
         "requesting_healthcare_worker",
-        "HPCSA_SANC_number",
+        "HPCSA",
         "contact_number",
-        "email_address"
+        "email_address",
+        "hospital_name",
+        "ward_number"
     ]
 }
 
@@ -43,16 +49,19 @@ def medical_data_extraction(transcript):
                 Patient:
                 patient_name
                 date_of_birth
-                patient_number
+                patient_ID_number
                 sex
+                symptoms
                 diagnosis
                 tests_requested (return as a list of tests)
                 
                 Healthcare Worker:
                 requesting_healthcare_worker
-                HPCSA_SANC_number
+                HPCSA
                 contact_number
                 email_address
+                hospital_name
+                ward_number
 
                 Do not invent information.
                 If information is not provided return null."""

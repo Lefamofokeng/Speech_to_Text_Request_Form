@@ -4,7 +4,7 @@ from llm import medical_data_extraction
 from toJson import json_exporter
 
 #audio_file = record_audio()
-transcript = transcribe("recording.wav")
+transcript = transcribe("clinician_recording2.mp3")
 data_fields = medical_data_extraction(transcript)
 json = json_exporter(data_fields)
 
