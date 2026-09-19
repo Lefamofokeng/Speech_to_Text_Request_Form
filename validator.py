@@ -3,6 +3,7 @@ from toJson import json_exporter
 def validate(json_output):
     FIELDS_TO_VERIFY = ["patient_name",
                         "patient_ID_number",
+                        "address",
                         "requesting_healthcare_worker",
                         "contact_number",
                         "email_address",
@@ -19,5 +20,5 @@ def validate(json_output):
              new_value = input("Enter correct value: ")
              json_output[field] = new_value
 
-    print(json_output)
+    return json_output
 

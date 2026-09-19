@@ -6,6 +6,7 @@ output_format = {
         "patient_name": {"type": ["string", "null"]},
         "date_of_birth": {"type": ["string", "null"]},
         "patient_ID_number": {"type": ["string", "null"]},
+        "address": {"type": ["string", "null"]},
         "sex": {"type": ["string","null"]},
         "symptoms": {"type":["string","null"]},
         "diagnosis": {"type": ["string", "null"]},
@@ -24,6 +25,7 @@ output_format = {
         "patient_name",
         "date_of_birth",
         "patient_ID_number",
+        "address",
         "sex",
         "symptoms",
         "diagnosis",
@@ -50,6 +52,7 @@ def medical_data_extraction(transcript):
                 patient_name
                 date_of_birth
                 patient_ID_number
+                address
                 sex
                 symptoms
                 diagnosis

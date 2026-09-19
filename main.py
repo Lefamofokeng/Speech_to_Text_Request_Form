@@ -9,11 +9,11 @@ data_fields = medical_data_extraction(transcript)
 json = json_exporter(data_fields)
 
 print("")
+print("")
 print(transcript)
 print("")
 # print(data_fields)
 print("")
 # print(json)
 # print("")
-
-validate(json)
+print(validate(json))
