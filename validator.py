@@ -5,7 +5,8 @@ def validate(json_output):
                         "patient_ID_number",
                         "requesting_healthcare_worker",
                         "contact_number",
-                        "email_address"
+                        "email_address",
+                        "hospital_name"
                         ]
     for field in FIELDS_TO_VERIFY:
         if field not in json_output:

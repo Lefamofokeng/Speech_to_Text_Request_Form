@@ -59,7 +59,7 @@ def medical_data_extraction(transcript):
                 requesting_healthcare_worker
                 HPCSA
                 contact_number
-                email_address
+                email_address (return as email address format: namesurname@example.com. No punctuation unlesss explicitly stated )
                 hospital_name
                 ward_number
 
